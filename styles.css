@@ -6,3 +6,19 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+body {
+  background: linear-Gradient(#134d71, #78a7c6, #f7e4bf);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+h1 {
+  color: #ffffff
+}
+svg {
+  height: 10%;
+  width: 10%;
+}
+
+.hidden {
+  display: none!important;
+}
