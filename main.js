@@ -2,9 +2,11 @@
 var message = document.querySelector('.message');
 var meditationImage = document.querySelector('svg');
 var loginPage = document.querySelector('.login');
-
+var mainPage = document.querySelector('.main-page');
+var welcomeMessage = document.querySelector('.welcome');
 // var title = document.querySelector('h1');
-var loginName
+
+
 //Buttons
 var messageButton = document.querySelector('.message-button');
 var loginButton = document.querySelector('.login-button');
@@ -32,8 +34,10 @@ function displayMessage() {
   message.classList.remove('hidden')
 };
 function login() {
-  loginName = document.querySelector('.name').value
-  alert(loginName)
+  var loginName = document.querySelector('.name').value
+  loginPage.classList.add('hidden');
+  mainPage.classList.remove('hidden');
+  welcomeMessage.innerText = `Welcome ${loginName}`
 }
 
 //affirmations and mantras
