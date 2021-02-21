@@ -1,12 +1,17 @@
 //Sections
 var message = document.querySelector('.message');
 var meditationImage = document.querySelector('svg');
+var loginPage = document.querySelector('.login');
+
 // var title = document.querySelector('h1');
+var loginName
 //Buttons
-var messageButton = document.querySelector('.message-button')
+var messageButton = document.querySelector('.message-button');
+var loginButton = document.querySelector('.login-button');
 
 //event listeners
 messageButton.addEventListener('click', displayMessage);
+loginButton.addEventListener('click', login)
 
 //functions
 function getRandomIndex(array) {
@@ -26,6 +31,10 @@ function displayMessage() {
   meditationImage.classList.add('hidden')
   message.classList.remove('hidden')
 };
+function login() {
+  loginName = document.querySelector('.name').value
+  alert(loginName)
+}
 
 //affirmations and mantras
 var affirmations = [
