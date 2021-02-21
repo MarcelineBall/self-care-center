@@ -1,18 +1,18 @@
 //Sections
-var message = document.queryselector('.message');
-var meditationImage = document.queryselector('svg');
+var message = document.querySelector('.message');
+var meditationImage = document.querySelector('svg');
 //Buttons
-var messageButton = document.queryselector(.'message-button');
+var messageButton = document.querySelector('.message-button')
 
 //event listeners
 messageButton.addEventListener('click', displayMessage);
 
 //functions
-displayMessage() {
+function displayMessage() {
   var selection = document.getElementsByName('statement-type');
-  for (var i = 0; i < selction.length; i++) {
-    if (selction[i].checked) {
-
+  for (var i = 0; i < selection.length; i++) {
+    if (selection[i].checked) {
+      alert(selection[i].value)
     }
   }
   meditationImage.classList.add('.hidden')
