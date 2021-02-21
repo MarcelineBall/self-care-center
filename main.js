@@ -1,6 +1,7 @@
 //Sections
 var message = document.querySelector('.message');
 var meditationImage = document.querySelector('svg');
+// var title = document.querySelector('h1');
 //Buttons
 var messageButton = document.querySelector('.message-button')
 
@@ -8,15 +9,22 @@ var messageButton = document.querySelector('.message-button')
 messageButton.addEventListener('click', displayMessage);
 
 //functions
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
 function displayMessage() {
   var selection = document.getElementsByName('statement-type');
+  var randomAffirmation = affirmations[getRandomIndex(affirmations)];
+  var randomMantra = mantras[getRandomIndex(mantras)];
   for (var i = 0; i < selection.length; i++) {
-    if (selection[i].checked) {
-      alert(selection[i].value)
+    if (selection[i].checked && (selection[i] === affirmation)) {
+      message.innerText = randomAffirmation;
+    } else if (selection[i].checked && (selection[i] === mantra)) {
+      message.innerText = randomMantra;
     }
   }
-  meditationImage.classList.add('.hidden')
-  message.classList.remove('.hidden')
+  meditationImage.classList.add('hidden')
+  message.classList.remove('hidden')
 };
 
 //affirmations and mantras
