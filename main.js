@@ -1,11 +1,9 @@
 //Sections
 var message = document.querySelector('.message');
-var meditationImage = document.querySelector('svg');
+var meditationImage = document.querySelector('.meditation-image');
 var loginPage = document.querySelector('.login');
 var mainPage = document.querySelector('.main-page');
 var welcomeMessage = document.querySelector('.welcome');
-// var title = document.querySelector('h1');
-
 
 //Buttons
 var messageButton = document.querySelector('.message-button');
